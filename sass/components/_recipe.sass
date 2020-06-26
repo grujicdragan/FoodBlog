@@ -1,0 +1,46 @@
+#recipe
+    display: grid
+    grid-template-columns: 15% auto 15%
+    grid-template-rows: auto
+    background-image: url("/public/assets/single-recipe.png")
+    background-repeat: no-repeat
+    background-position: 110% center
+    transform: translateY(20%)
+
+    .recipe-content
+        grid-column: 2 / 3
+    h1
+        font-family: $font-stack-header
+        font-size: 38px
+        font-weight: bold
+        margin-top: .5em
+
+    p, li, h5 
+        font-size: 16px
+        color: $light-fonts
+
+    ul
+        list-style-type: none
+        padding: 0 0 3em 0
+
+    h1, p
+        width: 50%
+
+    li
+        padding-bottom: 1em
+
+    h4
+        font-family: $font-stack-header
+        font-size: 18px
+        margin: 3em 0 0 0
+    p
+        line-height: 1.8
+    
+    .ingridients
+        display: flex
+        justify-content: start
+        align-items: end
+        width: 60%
+        
+        ul 
+            margin: 0 3em 0 0 

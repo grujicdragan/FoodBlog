@@ -1,0 +1,122 @@
+header 
+    background-color: $hero-banner
+    display: grid
+    color: $white
+    height: 840px
+    grid-template-columns: 15% 70% 15%
+    grid-template-rows: 10% 80% 10%
+    grid-template-areas: "... nav ..." "... content ..." "... ... ..."
+    background-image: url("/dist/assets/bg-shape.png"), url("/dist/assets/illustration.png")
+    background-position: 10% center, 90% center
+    background-repeat: no-repeat, no-repeat;
+    
+
+    
+    #header-content 
+        width: 45%
+        grid-area: content
+        display: flex 
+        flex-direction: column
+
+        
+        h1
+            font-family: $font-stack-header
+            font-weight: bold
+            font-size: 68px
+            margin: 110px 0 25px
+        p
+            margin-bottom: 55px
+            font-size: 18px
+            line-height: 1.5
+
+    nav
+        grid-area: nav
+        display: flex
+        align-items: center 
+        justify-content: space-between
+        font-weight: bold
+
+        .logo
+            cursor: pointer
+            padding: 0
+            li
+                padding: 0
+
+        .nav-items 
+            display: flex 
+            align-items: center 
+
+        #searchWrapper
+            visibility: hidden
+            transition: all 0.6s ease 0s
+            width: 0px
+            position: relative
+            img
+                cursor: pointer
+                position: absolute
+
+        ul 
+            list-style: none
+            position: relative
+
+            li
+                padding: 1.5rem
+                &:last-child
+                    padding-right: 0
+                
+                a 
+                    color: $white
+                    text-decoration: none
+                    display: inline-block
+                    &::after
+                        content: ''
+                        display: block
+                        width: 0
+                        transform: translateY(10px)
+                        height: 2px
+                        background: $btn-color
+                        transition: width .3s
+                    &:hover::after
+                        width: 100%
+                        transform: translate(-7px, 10px)
+                        padding-left: 14px
+                        transition: width .3s
+
+                input
+                    border: none
+                    border-bottom: 2px solid $btn-color
+                    color: #ffffff
+                    background-color: $hero-banner
+                    padding: 0px 0px 10px 30px
+                    width: 100%
+                    outline: none
+                    &::placeholder
+                        color: #ffffff
+
+        .toggle-button 
+            position: relative
+            top: .75rem
+            right: 1rem
+            display: none
+            flex-direction: column
+            justify-content: space-between
+            width: 30px
+            height: 21px
+            transition: 0.4s
+
+        .toggle-button .bar 
+            height: 3px
+            width: 100%
+            background-color: $white
+            border-radius: 10px
+            transition: 0.4s
+
+
+@media (max-width: 768px) 
+    nav
+        .toggle-button 
+            display: flex
+
+        .nav-items
+            display: none
+    

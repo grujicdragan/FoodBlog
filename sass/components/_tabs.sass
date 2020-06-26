@@ -1,0 +1,70 @@
+#meals
+    display: grid
+    grid-template-columns: 15% 70% 15%
+    grid-template-rows: 60px 148px 650px 200px
+    background-color: $latest-recipes-bg
+
+    .tabs-header
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+        text-align: center
+
+        h1
+            font-family: $font-stack-header
+            font-size: 34px
+            font-weight: bold
+            margin: 0
+        
+        p
+            font-size: 18px
+            color: $light-fonts
+            margin-bottom: 70px
+
+    .meal-content 
+        grid-column: 2 / 3
+        grid-row: 3 / 4 
+
+    .tabcontent
+        display: none
+        justify-content: space-between
+        align-items: flex-start
+        height: 500px
+        
+        .tab-text
+            width: 56%
+            h2
+                color: $tabs-green
+                font-family: $font-stack-header
+                font-size: 46px
+                font-weight: bold
+                margin-bottom: 50px
+                line-height: 1.2
+            p
+                margin-bottom: 30px
+                font-family: $font-stack-other
+                font-size: 18px
+                line-height: 1.5
+            button 
+                margin-top: 30px
+    .tabs
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 120px
+        
+        button
+            cursor: pointer
+            font-family: $font-stack-header
+            font-size: 28px
+            font-weight: bold
+            background-color: $latest-recipes-bg
+            color: $light-fonts
+            border: none
+            padding: 1em 1.5em .7em 1.5em
+            border-bottom: 5px solid $tabs-inactive
+            &.active
+                color: $dark-fonts
+                border-bottom: 5px solid $tabs-green
+            &:focus
+                outline: 0
+        
